@@ -273,11 +273,13 @@ Now we need to instruct gradle how to build that flavor. To do so here two solut
 ```
 "scripts": {
   ...
-  "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
+  "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+  "androidRelease": "cd ./android && ./gradlew app:assembleRelease"
 }
 ```
 
-Now run `npm run android` to build your application
+Now run `npm run android` to build your application or run `npm run androidRelease` to generate signed APK
+
 
 #### 7.2 Ignore other RNN flavors
 
